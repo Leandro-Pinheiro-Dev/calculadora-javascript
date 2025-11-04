@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Programação em Sistemas Embarcados II</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        font-family: "Poppins", sans-serif;
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        background: linear-gradient(135deg, #00b4db, #0083b0);
+        color: #fff;
+      }
+
+      header {
+        background: linear-gradient(90deg, #00223e, #005c97);
+        padding: 20px;
+        text-align: center;
+        color: #fff;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+      }
+
+      header h1 {
+        margin: 0;
+        font-size: 2em;
+        letter-spacing: 1px;
+      }
+
+      header h3 {
+        margin: 8px 0 0;
+        font-weight: 400;
+        font-size: 1em;
+      }
+
+      nav {
+        background-color: #004d7a;
+        text-align: center;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+      }
+
+      nav ul {
+        list-style: none;
+        margin: 0;
+        padding: 10px;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+
+      nav ul li {
+        margin: 8px 15px;
+      }
+
+      nav ul li a {
+        color: white;
+        text-decoration: none;
+        font-weight: 600;
+        padding: 6px 12px;
+        border-radius: 6px;
+        transition: background 0.3s;
+      }
+
+      nav ul li a:hover {
+        background-color: rgba(255, 255, 255, 0.2);
+      }
+
+      section {
+        padding: 40px 20px;
+        text-align: center;
+      }
+
+      section h2 {
+        color: #fff;
+        margin-bottom: 25px;
+        font-size: 1.8em;
+      }
+
+      .cards {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 25px;
+      }
+
+      .card {
+        background: linear-gradient(135deg, #0072ff, #00c6ff);
+        width: 250px;
+        border-radius: 15px;
+        padding: 20px;
+        color: #fff;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+        transition: transform 0.3s, box-shadow 0.3s;
+        cursor: pointer;
+      }
+
+      .card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 6px 25px rgba(0, 0, 0, 0.4);
+      }
+
+      .card h3 {
+        margin-bottom: 10px;
+      }
+
+      #resultado {
+        display: none;
+        background: white;
+        color: #333;
+        margin: 30px auto;
+        width: 80%;
+        max-width: 700px;
+        padding: 25px;
+        border-radius: 10px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+        animation: fadeIn 0.5s ease-in;
+        text-align: left;
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      button {
+        background: linear-gradient(90deg, #0061ff, #60efff);
+        border: none;
+        color: #fff;
+        padding: 10px 20px;
+        margin-top: 15px;
+        border-radius: 8px;
+        cursor: pointer;
+        font-weight: 600;
+        transition: 0.3s;
+      }
+
+      button:hover {
+        background: linear-gradient(90deg, #0044cc, #46d3e2);
+      }
+
+      footer {
+        background: #00223e;
+        color: #ccc;
+        text-align: center;
+        padding: 20px;
+        margin-top: 40px;
+        font-size: 0.9em;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <h1>💻 Programação em Sistemas Embarcados II</h1>
+      <h3>Curso de Sistemas Embarcados — Professora Luciana</h3>
+    </header>
+
+    <section id="exercicios">
+      <h2>Exercícios Interativos</h2>
+      <div class="cards">
+        <div class="card" onclick="ex1()">
+          <h3>1️⃣ Soma ou Subtração</h3>
+          <p>Mostra a soma se o segundo número for maior, senão subtrai.</p>
+        </div>
+        <div class="card" onclick="ex2()">
+          <h3>2️⃣ Salário e Idade</h3>
+          <p>Aplica 10% a mais ou a menos conforme a idade for par ou ímpar.</p>
+        </div>
+        <div class="card" onclick="ex3()">
+          <h3>3️⃣ Calculadora</h3>
+          <p>Efetua cálculos com os operadores +, -, * ou /.</p>
+        </div>
+        <div class="card" onclick="ex4()">
+          <h3>4️⃣ Tabuada Colorida</h3>
+          <p>Mostra tabuada com pares em azul e ímpares em vermelho.</p>
+        </div>
+        <div class="card" onclick="ex5()">
+          <h3>5️⃣ Números Pares</h3>
+          <p>Exibe todos os números pares entre dois valores.</p>
+        </div>
+        <div class="card" onclick="ex6()">
+          <h3>6️⃣ Soma e Multiplicação</h3>
+          <p>Mostra soma dos pares e multiplicação dos ímpares.</p>
+        </div>
+      </div>
+
+      <div id="resultado"></div>
+    </section>
+
+    <section id="sobre">
+      <h2>📘 Sobre a Tarefa</h2>
+      <p>
+        Este site foi desenvolvido como parte da disciplina
+        <strong>Programação em Sistemas Embarcados II</strong>, ministrada pela
+        professora <strong>Luciana</strong>, no curso de
+        <strong>Sistemas Embarcados</strong>. O objetivo é aplicar conceitos de
+        lógica de programação e JavaScript em atividades práticas e interativas.
+      </p>
+    </section>
+
+    <footer>
+      <p>Desenvolvido por <strong>Leandro Pinheiro dos Santos</strong></p>
+      <p>&copy; 2025 — Curso de Sistemas Embarcados | Professora Luciana</p>
+    </footer>
+
+    <script>
+      function mostrar(texto) {
+        const r = document.getElementById("resultado");
+        r.style.display = "block";
+        r.innerHTML =
+          texto + "<br><button onclick='limpar()'>🔙 Voltar</button>";
+        r.scrollIntoView({ behavior: "smooth" });
+      }
+
+      function limpar() {
+        document.getElementById("resultado").style.display = "none";
+      }
+
+      function ex1() {
+        let n1 = parseFloat(prompt("Digite o primeiro número:"));
+        let n2 = parseFloat(prompt("Digite o segundo número:"));
+        let res = n2 > n1 ? n1 + n2 : n1 - n2;
+        mostrar(`<h3>Resultado:</h3>${res}`);
+      }
+
+      function ex2() {
+        let salario = parseFloat(prompt("Digite o salário:"));
+        let idade = parseInt(prompt("Digite a idade:"));
+        let liquido = idade % 2 === 0 ? salario * 1.1 : salario * 0.9;
+        mostrar(`<h3>Salário e Idade</h3>
+        Idade: ${idade}<br>
+        Salário Bruto: R$ ${salario.toFixed(2)}<br>
+        Salário Líquido: R$ ${liquido.toFixed(2)}`);
+      }
+
+      function ex3() {
+        let n1 = parseFloat(prompt("Primeiro número:"));
+        let n2 = parseFloat(prompt("Segundo número:"));
+        let op = prompt("Operador (+, -, * ou /):");
+        let r;
+        switch (op) {
+          case "+":
+            r = n1 + n2;
+            break;
+          case "-":
+            r = n1 - n2;
+            break;
+          case "*":
+            r = n1 * n2;
+            break;
+          case "/":
+            r = n1 / n2;
+            break;
+          default:
+            r = "❌ Operador inválido.";
+        }
+        mostrar(`<h3>Resultado:</h3>${r}`);
+      }
+
+      function ex4() {
+        let n = parseInt(prompt("Digite um número:"));
+        let texto = `<h3>Tabuada do ${n}</h3>`;
+        for (let i = 1; i <= 10; i++) {
+          let r = n * i;
+          let cor = r % 2 === 0 ? "blue" : "red";
+          texto += `<span style='color:${cor}; font-weight:bold;'>${n} x ${i} = ${r}</span><br>`;
+        }
+        mostrar(texto);
+      }
+
+      function ex5() {
+        let n1 = parseInt(prompt("Primeiro número:"));
+        let n2 = parseInt(prompt("Segundo número:"));
+        let texto = `<h3>Números pares entre ${n1} e ${n2}:</h3>`;
+        for (let i = n1; i <= n2; i++) {
+          if (i % 2 === 0) texto += i + "<br>";
+        }
+        mostrar(texto);
+      }
+
+      function ex6() {
+        let n1 = parseInt(prompt("Primeiro número:"));
+        let n2 = parseInt(prompt("Segundo número:"));
+        let soma = 0,
+          mult = 1;
+        for (let i = n1; i <= n2; i++) {
+          if (i % 2 === 0) soma += i;
+          else mult *= i;
+        }
+        mostrar(`<h3>Resultados:</h3>
+        Soma dos pares: ${soma}<br>
+        Multiplicação dos ímpares: ${mult}`);
+      }
+    </script>
+  </body>
+</html>
