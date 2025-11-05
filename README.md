@@ -1,6 +1,6 @@
 # 🧮 Calculadora e Exercícios Interativos em JavaScript
 
-Este projeto foi desenvolvido como parte da disciplina **Programação em Sistemas Embarcados II**, ministrada pela professora **Luciana**, com o objetivo de aplicar conceitos de **lógica de programação**, **estruturas condicionais**, **operações matemáticas**, manipulação do **DOM** e **funções** utilizando **JavaScript**.
+Este projeto foi desenvolvido como parte da disciplina **Programação em Sistemas Embarcados II**, ministrada pela professora **Luciana** na **FATEC**,faculdade de Tecnologia de jundiai, com o objetivo de aplicar conceitos de **lógica de programação**, **estruturas condicionais**, **operações matemáticas**, manipulação do **DOM** e **funções** utilizando **JavaScript**.
 
 🔗 **Acesse o projeto online:**
 [https://tarefacalculadorajavascript.netlify.app](https://tarefacalculadorajavascript.netlify.app)
@@ -15,13 +15,8 @@ A proposta da aplicação é disponibilizar um conjunto de exercícios práticos
 
 ## 🖼️ Interface da Aplicação
 
-> *Imagem ilustrativa da página inicial do projeto:*
-
-*(Adicione aqui sua captura de tela – coloque o arquivo em `/assets/preview.png.png` e substitua pelo caminho real)*
-
-```markdown
 ![Página inicial da aplicação](./assets/preview.png.png)
-```
+
 
 ---
 
@@ -41,7 +36,6 @@ A proposta da aplicação é disponibilizar um conjunto de exercícios práticos
 ## 🧠 Tecnologias Utilizadas
 
 * **HTML5** → Estrutura da interface
-* **CSS3** → Estilização e experiência visual
 * **JavaScript (ES6+)** → Lógica, eventos e manipulação do DOM
 
 ---
