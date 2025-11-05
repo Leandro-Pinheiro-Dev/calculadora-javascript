@@ -17,10 +17,10 @@ A proposta da aplicação é disponibilizar um conjunto de exercícios práticos
 
 > *Imagem ilustrativa da página inicial do projeto:*
 
-*(Adicione aqui sua captura de tela – coloque o arquivo em `/assets/preview.png` e substitua pelo caminho real)*
+*(Adicione aqui sua captura de tela – coloque o arquivo em `/assets/preview.png.png` e substitua pelo caminho real)*
 
 ```markdown
-![Página inicial da aplicação](./assets/preview.png)
+![Página inicial da aplicação](./assets/preview.png.png)
 ```
 
 ---
